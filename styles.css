@@ -1,0 +1,342 @@
+/* ================= RESET Y BASE ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #5b5e67;
+    background: #ffffff;
+}
+
+/* ================= HEADER ================= */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #f7f7f7;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* baja los enlaces */
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo img {
+    height: 105px;
+}
+
+/* ================= NAV ================= */
+nav {
+    display: flex;
+    gap: 40px;
+    padding-bottom: 25px; /* alineación con SOLUTIONS */
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #5b5e67;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+/* animación subrayado */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #2e3192;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ================= HOME ================= */
+.hero {
+    padding-top: 180px; /* espacio por header fijo */
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.hero-content {
+    max-width: 1100px;
+    text-align: center;
+}
+
+.hero-logo {
+    width: 220px;
+    margin-bottom: 30px;
+}
+
+.primary {
+    color: #2e3192;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.tagline {
+    display: block;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #5b5e67;
+}
+
+/* imagen principal HOME */
+.home-image {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.home-image img {
+    width: 1100px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* ================= SECCIONES GENERALES ================= */
+.section {
+    padding: 100px 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.section > div,
+.section > ul,
+.section > p,
+.section > h2 {
+    max-width: 1100px;
+    width: 100%;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #2e3192;
+}
+
+.gray {
+    background: #f7f7f7;
+}
+
+/* ================= QUIÉNES SOMOS ================= */
+#about {
+    background: #2e3192;
+    color: #f7f7f7;
+    text-align: center;
+}
+
+#about h2 {
+    color: #f7f7f7;
+}
+
+#about p {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    line-height: 1.7;
+}
+
+/* ================= SERVICIOS ================= */
+/* ================= SERVICIOS (ESTILO OKOMU) ================= */
+
+.services-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e3192;
+    margin-bottom: 10px;
+}
+
+.services-intro {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #5b5e67;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-box {
+    background: #ffffff;
+    padding: 35px 30px;
+    text-align: left;
+    border-left: 6px solid #2e3192;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box h3 {
+    font-size: 18px;
+    color: #2e3192;
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #5b5e67;
+}
+
+/* efecto hover sutil tipo okomu */
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.10);
+}
+
+/* ================= SECTORES ================= */
+#sectors {
+    background: linear-gradient(
+        rgba(46,49,146,0.9),
+        rgba(46,49,146,0.9)
+    ),
+    url("https://images.unsplash.com/photo-1556761175-4b46a572b786") center/cover;
+    color: #ffffff;
+    text-align: center;
+}
+
+#sectors h2 {
+    color: #ffffff;
+}
+
+.sectors {
+    list-style: none;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sectors li {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* ================= POR QUÉ ELEGIRNOS ================= */
+#why {
+    text-align: center;
+}
+
+.why {
+    list-style: none;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.why li {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* ================= CONTACTO (VERTICAL) ================= */
+
+.contact-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-intro {
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: #5b5e67;
+}
+
+.contact-info-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    color: #5b5e67;
+}
+
+.contact-item i {
+    font-size: 20px;
+    color: #2e3192;
+}
+
+/* mapa ya centrado */
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #5b5e67;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        padding-bottom: 10px;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .section {
+        padding: 80px 30px;
+    }
+}
