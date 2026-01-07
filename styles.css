@@ -150,24 +150,35 @@ nav a:hover::after {
     background: #f7f7f7;
 }
 
-/* ================= QUIÉNES SOMOS ================= */
+/* ================= FIX QUIÉNES SOMOS (MÓVIL) ================= */
+
 #about {
-    background: #2e3192;
-    color: #f7f7f7;
+    display: block; /* elimina el flex problemático en móvil */
+}
+
+.about-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
     text-align: center;
 }
 
-#about h2 {
-    color: #f7f7f7;
+@media (max-width: 768px) {
+
+    #about {
+        padding: 70px 20px;
+    }
+
+    .about-wrapper {
+        padding: 0;
+    }
+
+    #about p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
 }
 
-#about p {
-    max-width: 900px;
-    margin: 0 auto 20px;
-    line-height: 1.7;
-}
-
-/* ================= SERVICIOS ================= */
 /* ================= SERVICIOS (ESTILO OKOMU) ================= */
 
 .services-wrapper {
