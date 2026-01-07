@@ -152,6 +152,35 @@ nav a:hover::after {
 
 /* ================= FIX QUIÉNES SOMOS (MÓVIL) ================= */
 
+/* ================= SECCIONES CON OVERLAY ================= */
+
+.overlay-section {
+    background: linear-gradient(
+        rgba(46,49,146,0.9),
+        rgba(46,49,146,0.9)
+    ),
+    url("https://images.unsplash.com/photo-1556761175-4b46a572b786") center/cover;
+    color: #ffffff;
+    text-align: center;
+}
+
+.overlay-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.overlay-section h2 {
+    color: #ffffff;
+}
+
+.overlay-section p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+
 #about {
     display: block; /* elimina el flex problemático en móvil */
 }
