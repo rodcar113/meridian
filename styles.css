@@ -70,7 +70,7 @@ nav a:hover::after {
     padding-bottom: 100px;
     display: flex;
     justify-content: center;
-    background: #ffffff;
+    background: #f7f7f7;
 }
 
 .hero-content {
@@ -150,6 +150,49 @@ nav a:hover::after {
     background: #f7f7f7;
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #2e3192;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #f7f7f7;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
 /* ================= FIX QUIÉNES SOMOS (MÓVIL) ================= */
 
 /* ================= SECCIONES CON OVERLAY ================= */
@@ -206,6 +249,22 @@ nav a:hover::after {
         font-size: 15px;
         line-height: 1.6;
     }
+}
+
+.about-bg {
+    background: linear-gradient(
+        rgba(46,49,146,0.9),
+        rgba(46,49,146,0.9)
+    ),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover;
+}
+
+.sectors-bg {
+    background: linear-gradient(
+        rgba(46,49,146,0.9),
+        rgba(46,49,146,0.9)
+    ),
+    url("https://images.unsplash.com/photo-1556761175-4b46a572b786") center/cover;
 }
 
 /* ================= SERVICIOS (ESTILO OKOMU) ================= */
